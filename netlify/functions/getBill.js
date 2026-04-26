@@ -20,7 +20,7 @@ exports.handler = async function (event) {
 
         const sheets = google.sheets({ version: "v4", auth: client });
 
-        const spreadsheetId = "YOUR_SHEET_ID_HERE";
+        const spreadsheetId = process.env.SPREADSHEET_ID;
 
         const response = await sheets.spreadsheets.values.get({
             spreadsheetId,
