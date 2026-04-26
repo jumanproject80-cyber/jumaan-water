@@ -1,4 +1,6 @@
-document.querySelector("button").addEventListener("click", function () {
+const button = document.querySelector("button");
+
+button.addEventListener("click", function () {
     const accountNumber = document.getElementById("accountNumber").value.trim();
     const message = document.getElementById("message");
     const loading = document.getElementById("loading");
@@ -6,18 +8,22 @@ document.querySelector("button").addEventListener("click", function () {
 
     message.textContent = "";
     result.style.display = "none";
+    result.innerHTML = "";
 
     if (accountNumber === "") {
         message.textContent = "⚠️ الرجاء إدخال رقم الحساب";
         return;
     }
 
+    // تعطيل الزر
+    button.disabled = true;
+
+    // إظهار اللودينق
     loading.style.display = "block";
 
     setTimeout(() => {
         loading.style.display = "none";
 
-        // بيانات وهمية (سنستبدلها لاحقاً)
         result.innerHTML = `
       <strong>اسم المشترك:</strong> أحمد محمد<br>
       <strong>الشهر:</strong> مارس 2026<br>
@@ -27,5 +33,8 @@ document.querySelector("button").addEventListener("click", function () {
     `;
 
         result.style.display = "block";
+
+        // إعادة تفعيل الزر
+        button.disabled = false;
     }, 2000);
 });
