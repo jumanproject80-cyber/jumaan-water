@@ -1,6 +1,7 @@
 document.querySelector("button").addEventListener("click", function () {
     const accountNumber = document.getElementById("accountNumber").value.trim();
     const message = document.getElementById("message");
+    const loading = document.getElementById("loading");
 
     message.textContent = "";
 
@@ -9,5 +10,12 @@ document.querySelector("button").addEventListener("click", function () {
         return;
     }
 
-    console.log("رقم الحساب:", accountNumber);
+    // إظهار اللودينق
+    loading.style.display = "block";
+
+    // محاكاة عملية البحث (2 ثانية)
+    setTimeout(() => {
+        loading.style.display = "none";
+        console.log("تم البحث عن:", accountNumber);
+    }, 2000);
 });
