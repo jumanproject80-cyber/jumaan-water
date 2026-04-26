@@ -35,3 +35,12 @@ button {
 button:hover {
     background-color: #007c91;
 }
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
