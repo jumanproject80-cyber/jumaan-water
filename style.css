@@ -69,3 +69,13 @@ button:hover {
     }
 
 }
+
+#loading {
+    margin-top: 15px;
+    color: #00796b;
+    font-weight: bold;
+}
+
+#message {
+    font-size: 14px;
+}

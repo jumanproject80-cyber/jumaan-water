@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>استعلام فواتير المياه</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,7 +19,15 @@
         <input type="text" id="accountNumber" placeholder="رقم الحساب">
 
         <button>بحث</button>
+
+        <!-- 👇 هنا بالضبط تحت الزر -->
+        <div id="loading" style="display:none;">⏳ جاري البحث...</div>
+
+        <div id="message" style="margin-top:15px; color:red;"></div>
     </div>
+
+    <!-- مهم جداً يكون في الأسفل -->
+    <script src="script.js"></script>
 
 </body>
 
